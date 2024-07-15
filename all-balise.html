@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de document HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body style="padding: 10px; background-color: #1f2937; color: #fff; font-size: 18px;">
+    <!-- COMMENTAIRE EN HTML -->
+
+    <!-- BALISES TITRES -->
+     <h1>Titre de niveau 1 (h1)</h1>
+     <h2>Titre de niveau 2 (h2)</h2>
+     <h3>Titre de niveau 3 (h3)</h3>
+     <h4>Titre de niveau 4 (h4)</h4>
+     <h5>Titre de niveau 5 (h5)</h5>
+     <h6>Titre de niveau 6 (h6)</h6>
+
+      <!-- BALISES PARAGRAPHES ET SAUTS DE LIGNE-->
+       <P>Paragraphe (p)</P>
+       <P>Paragraphe (p) <br>test</P>
+
+       <!-- BALISES LIENS -->
+        <a href="https://openclassrooms.com">Lien (a)</a>
+
+         <!-- BALISES IMAGES -->
+        <img src="GateKeepers.PNG" alt="enterprise">
+
+         <!-- BALISES LISTES -->
+          <ul>
+            <li>
+                Liste non ordonnée (ul)
+                <ul>
+                    <li>Elément de liste (li)</li>
+                    <li>Elément de liste (li)</li>
+                </ul>
+            </li>
+          </ul>
+
+          <ol>
+            <li>
+                Liste ordonnée (ol)
+                <ol>
+                    <li>Elément de liste (li)</li>
+                    <li>Elément de liste (li)</li>
+                </ol>
+            </li>
+          </ol>
+
+           <!-- BALISES TABLEAUX -->
+            <table>
+                <tr>
+                    <th>En-tete de tableau (th)</th>
+                    <th>En-tete de tableau (th)</th>
+                </tr>
+                <tr>
+                    <td>Cellule de tableau (td)</td>
+                    <td>Cellule de tableau (td)</td>
+                </tr>
+            </table>
+
+             <!-- BALISES FORMULAIRES -->
+             <form>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom">
+                <input type="submit" value="Envoyer">
+                <button type="submit">Cliquez ici</button>
+             </form>
+
+             
+            <!-- BALISES div -->
+            <div>Div (div)</div>
+
+             <!-- BALISES span -->
+             <span>Span (span)</span>
+
+            <!-- BALISES ENTETEs -->
+            <header>En-tete de section (header)</header>
+
+            <!-- BALISES PIED DE PAGE -->
+            <footer>Pied de page (footer)</footer>
+
+            <!-- BALISES NAVIGATIONs -->
+            <nav>Navigation (nav)</nav>
+
+            <!-- BALISES SECTIONs -->
+            <section>Section (section)</section>
+
+            <!-- BALISES aside -->
+            <aside>Contenu annexe (aside)</aside>
+
+            <!-- BALISES time -->
+            <time datetime="2024-07-14">14 juillet 2024 (time)</time>
+
+            <!-- BALISES ABREVIATIONS -->
+            <abbr title="Hypertext Markup Language">HTML (abbr)</abbr>
+            
+            <!-- BALISES SEPARATIONS (hr) -->
+            <p>loic <hr>maison </p>
+
+            <!-- BALISES CODES -->
+            <code> 
+                exports.getTOList = ('/getTOList',(req, res, next) => {
+                    var request = new sql.Request();
+                        request.query(`select * from [PROD].[TransportOrder]`)
+                        .then((result) => {
+                            if(result.recordset.length>0){
+                                res.status(200).json(result.recordset)
+                            }else{
+                                res.status(404).json({message:"Aucun enregistrement n'a été trouvé"})
+                            }
+                        })
+                        .catch((err) => {res.status(500).json({ err });console.log(err)}); 
+                });
+            </code>
+
+            <!-- BALISES PREVISUALISATIONS -->
+            <pre>Texte préformaté (pre)</pre>
+
+            <!-- BALISES CITATIONS -->
+            <blockquote>Citation (blockquote)</blockquote>
+
+            <cite>Autre balise Citation (cite)</cite>
+
+            <q>Citation courte (q)</q>
+
+            <!-- BALISES D'IMPORTANCES -->
+            <strong>Texte important (strong)</strong>
+
+            <!-- BALISES A TEXTES REDUITES -->
+            <small>Texte de taille réduite (small)</small>
+
+            <!-- BALISES MARQUES -->
+            <mark>Texte marqué (mark)</mark>
+
+            <!-- BALISES BARRES OU SUPPRIMES TEXTES -->
+            <del>Texte supprimé (del)</del>
+
+            <!-- BALISES INSERTIONS TEXTES -->
+            <ins>Texte ajouté (ins)</ins>
+
+            <!-- BALISES INDICES TEXTES -->
+            <sub>Texte en indice (sub)</sub>
+
+            <!-- BALISES DEFINITIONS -->
+            <dfn>Définition (dfn)</dfn>
+
+            <!-- BALISES SOULIGNEMENT -->
+            <u>Texte souligné (u)</u>
+
+            <!-- BALISES ITALIC -->
+            <i>Texte en italique (i)</i>
+
+            <!-- BALISES CADRES -->
+            <fieldset>
+                <legend>Légende (legend)</legend>
+            </fieldset>
+
+            <!-- BALISES ZONES TEXTES -->
+            <textarea rows="4" cols="50"></textarea>
+
+            <!-- BALISES BARRES DE PROGRESSION -->
+             <progress value="50" max="100">50%</progress>
+
+             <meter value="25" max="100">25%</meter>
+
+            <!-- BALISES DE SELECTION -->
+             <input type="range" id="range" name="range">
+
+            <!-- BALISES DEROULANTES -->
+            <details>
+                <summary>Détails (details)</summary>
+                <p>Contenu détaillé (p)</p>
+            </details>
+
+            <!-- BALISES POUR MODALES -->
+            <dialog open>
+                <p>Dialogue (dialog)</p>
+                <button>Ok</button>
+                <button>Annuler</button>
+            </dialog>
+
+            <!-- BALISES POUR AUDIOS -->
+            <audio controls>
+                <source src="travail.mp4" type="audio/mpeg">
+                Votre navigateur ne prend pas en charge l'élément audio.
+            </audio>
+
+            <!-- BALISES POUR VIDEOS -->
+            <video controls>
+                <source src="shop.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge l'élément vidéo.
+            </video>
+
+            <!-- BALISES POUR CADRES -->
+            <iframe src="https://google.com" frameborder="0"></iframe>
+
+            <!-- BALISES POUR FORMES VECTORIELLES -->
+            <svg width="100" height="100">
+                <circle
+                    cx="50"
+                    cy="50"
+                    r="40"
+                    stroke="black"
+                    stroke-width="2"
+                    fill="red"
+                >
+            </svg>
+
+            <!-- BALISES POUR DESSINER -->
+             <canvas id="myCanvas" width="200" height="100"></canvas>
+
+            <!-- BALISES POUR INTEGRER PDF,DOCX,PPTX etc... -->
+            <embed src="Parcours-developpeur-web-openclassroom.pdf" type="application/pdf"> <br>
+            
+            <!-- BALISES input all -->
+            <form action="traitement_formulaire.php" method="POST" id="Form2">
+                <label for="text">Champ texte :</label>
+                <input type="text" id="text" name="text" placeholder="Entrer un texte"> <br><br>
+                <label for="pass">Mot de passe:</label>
+                <input type="password" id="pass" name="pass" placeholder="*******"><br><br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com"><br><br>
+                <label for="number">Numéro :</label>
+                <input type="number" id="number" name="number" placeholder="+237 693467210"><br><br>
+                <label for="telephone">Téléphone :</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+237 670672272"><br><br>
+                <label for="date">Date :</label>
+                <input type="date" name="date" id="date" placeholder="14-07-2024"><br><br>
+                <label for="heure">Heure :</label>
+                <input type="time" id="heure" name="heure" placeholder="02h-45min-05s"><br><br>
+                <label for="url">URL :</label>
+                <input type="url" id="url" name="url" placeholder="https://google.com"><br><br>
+                <label for="case">Case à cocher :</label>
+                <input type="checkbox" id="case" name="case" value="1"><br><br>
+                <label for="radio1">Option 1 :</label>
+                <input type="radio" id="radio1" name="option" value="1"><br><br>
+                <label for="radio2">Option 2 :</label>
+                <input type="radio" id="radio2" name="option" value="2"><br><br>
+
+                <label for="liste">Liste déroulante 1 :</label>
+                <select name="liste" id="liste">
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select><br><br>
+
+                <label for="liste">Liste déroulante 2:</label>
+                <select name="liste" id="liste">
+                    <optgroup>
+                        <option value="option4">Option 4</option>
+                        <option value="option5">Option 5</option>
+                        <option value="option6">Option 6</option>
+                    </optgroup>
+                </select><br><br>
+
+                <label for="texte"></label>
+                <textarea name="texte" id="texte" rows="4" cols="30" placeholder="Coding is good"></textarea><br><br>
+                <input type="submit" value="Envoyer">
+
+            </form>
+
+            <!-- BALISES ARTICLE -->
+            <article>Mon article</article>
+
+            <!-- BALISES POUR FIGURES -->
+            <figure>
+                <picture>
+                    <source srcset="iis.png" media="(min-width: 1200px)">
+                    <source srcset="bkg-blu.jpg" media="(min-width: 768px)">
+                    <img src="w-brand.png" alt="Image réactive">
+                </picture>
+                <figcaption>Légende de l'image réactive</figcaption>
+            </figure>
+
+            <!-- BALISES POUR INDIQUER LE CODE A TAPER PAR L'UTILISATEUR -->
+            <kbd>Touche du clavier (kbd)</kbd>
+
+            <!-- BALISES POUR INDIQUER LES CALCULS MATHS A TAPER PAR L'UTILISATEUR -->
+            <var>Variable (var)</var>
+</body>
+</html>
